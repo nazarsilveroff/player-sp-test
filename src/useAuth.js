@@ -1,9 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import axios from "axios";
 
-const code = new URLSearchParams(window.location.search).get("code")
-
-export default function UseAuth() {
+export default function UseAuth(code) {
     const [accessToken, setAccessToken] = useState()
     const [refreshToken, setRefreshToken] = useState()
     const [expiresIn, setExpiresIn] = useState()
@@ -20,7 +18,7 @@ export default function UseAuth() {
                 setExpiresIn(res.data.expiresIn)
             })
             .catch((err) => {
-                window.location = "/"
+                // window.location = "/"
             })
             .finally(() => {
                 window.history.pushState({}, null, "/")

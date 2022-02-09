@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import UseAuth from "./useAuth";
 import {Container, Form} from "react-bootstrap";
 import SpotifyWebApi from 'spotify-web-api-node'
 import TrackSearchResult from "./TrackSearchResult";
@@ -10,8 +9,7 @@ const spotifyApi = new SpotifyWebApi({
 })
 
 
-function Dashboard() {
-    const accessToken = UseAuth()
+function Dashboard({accessToken}) {
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState([])
     const [playingTrack, setPlayingTrack] = useState()
