@@ -4,7 +4,7 @@ import {Container} from "react-bootstrap"
 const AUTH = {
     client_id: 'bfe85378212a41e28d75b148ed4136bd',
     response_type: 'code',
-    redirect_uri: 'http://localhost:3000',
+    redirect_uri: 'https://sp-player-test.netlify.app',
     scope: 'streaming',
 
 }

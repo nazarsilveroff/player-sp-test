@@ -18,7 +18,7 @@ export default function UseAuth(code) {
                 setExpiresIn(res.data.expiresIn)
             })
             .catch((err) => {
-                // window.location = "/"
+                window.location = "/"
             })
             .finally(() => {
                 window.history.pushState({}, null, "/")
